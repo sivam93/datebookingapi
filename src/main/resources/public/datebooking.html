@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bookingapp</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" src="dateScript.js"></script>
+<script type="text/javascript" src="jquery.simple-dtpicker.js"></script>
+<link type="text/css" href="jquery.simple-dtpicker.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="date.css">
+</head>
+<body>
+<div   class="items">
+<div>select experts from the drop down</div>
+<select>
+  <option value="user1">user1</option>
+  <option value="user2">user2</option>
+  <option value="user3">user3</option>
+</select>
+
+<input type="text" name="date2" value="2019/01/01 10:00">
+	<script type="text/javascript">
+		$(function(){
+			$('*[name=date2]').appendDtpicker({"inline": true});
+		});
+	</script>
+
+</div>
+</body>
+</html>
