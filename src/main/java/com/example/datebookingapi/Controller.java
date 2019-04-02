@@ -34,8 +34,8 @@ public class Controller {
     public static final Map<String, String> userMap = new HashMap<String, String>() {
 
         {
-            put("AA001", "AA001");
-            put("AA002", "AA002");
+            put("USER", "USER");
+            
         }
     };
     
@@ -77,7 +77,7 @@ public class Controller {
         if ( sample.containsKey(new SimpleDateFormat("dd/MM/yyyy hh:mm").format(request.getSample()))) {
           return sample.get("gh");
       } else {
-          if(checkForoffHours(request)) return 
+          //if(checkForoffHours(request)) return 
           sample.put(new SimpleDateFormat("dd/MM/yyyy hh:mm").format(request.getSample()), "");
           return "Booked";
       }
