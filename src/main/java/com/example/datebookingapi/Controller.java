@@ -73,13 +73,26 @@ public class Controller {
   public String Lists(@RequestBody RequestDTo request) throws ParseException {
        // sample.get(new SimpleDateFormat("dd/MM/yyyy hh:mm").format(request.getSample()));
         sample.put("gh", "DateBooked");
+        
         if ( sample.containsKey(new SimpleDateFormat("dd/MM/yyyy hh:mm").format(request.getSample()))) {
           return sample.get("gh");
       } else {
+          if(checkForoffHours(request)) return 
           sample.put(new SimpleDateFormat("dd/MM/yyyy hh:mm").format(request.getSample()), "");
           return "Booked";
       }
     }
+
+
+
+private boolean checkForoffHours(RequestDTo request) {
+
+    
+    
+    
+    // TODO Auto-generated method stub
+    return true;
+}
 }
 
 //    @PostMapping(value = "/experts", consumes = "application/json", produces = "application/json")
